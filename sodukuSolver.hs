@@ -169,6 +169,10 @@ fullRun smnd cache =
     then L.concat done
     else let Unfinished next = L.head res in fullRun next cache'
 
+solveSudoku :: Board -> [Board]
+solveSudoku initBoard =
+  fullRun (start initBoard) S.empty
+
 runSearchM :: SearchM a
            -> (a -> (ListT (State (S.Set Board)) Result))
            -> S.Set Board
