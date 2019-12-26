@@ -13,7 +13,15 @@ you can run it in the ghci toploop directly.
 
 ## Using the solver
 
-Run ```solveSudoku <initial_board>```
+Run ```solveSudoku <initial_board>```. The board needs to be a map with 
+key type ```(Integer, Integer)``` and value type ```Integer```.
+
+Example: ```let testBoard = M.fromList [((0,0),1),((0,1),2),((0,2),0),((0,3),0),
+                                        ((1,0),3),((1,1),0),((1,2),0),((1,3),0),
+                                        ((2,0),0),((2,1),0),((2,2),0),((2,3),3),
+                                        ((3,0),0),((3,1),0),((3,2),0),((3,3),1)]
+            in solveSudoku testBoard
+                                        ```
 
 ## Notes
 
