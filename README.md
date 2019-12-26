@@ -14,7 +14,7 @@ you can run it in the ghci toploop directly.
 ## Using the solver
 
 Run `solveSudoku <initial_board>`. The board needs to be a map with 
-key type `(Integer, Integer)` and value type `haskell Integer`.
+key type `(Integer, Integer)` and value type `Integer`.
 
 Example: 
 
